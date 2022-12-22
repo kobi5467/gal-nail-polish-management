@@ -87,17 +87,13 @@ const HomeScreen = () => {
             </Button>
           </Grid>
         </Grid>
-        <Grid item xs={12} lg={0.2}></Grid>
         <Grid
           item
-          container
           xs={12}
           lg={5.9}
           style={{
             padding: 20,
             borderRadius: 12,
-            justifyContent: "center",
-            alignItems: "center",
           }}
         >
           <Grid item xs={12}>
