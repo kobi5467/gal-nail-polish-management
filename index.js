@@ -49,6 +49,7 @@ const url =
   password +
   "@gelnailpolishmanagement.clpgail.mongodb.net/?retryWrites=true&w=majority";
 
+console.log("hello 1");
 mongoose.set("strictQuery", true);
 mongoose.connect(url);
 
@@ -58,7 +59,7 @@ connection.once("open", () => {
 });
 
 const port = process.env.PORT || 3001;
-
+console.log("hello 2");
 app.listen(port, () => {
   console.log("Server is listening on port " + port);
 });
