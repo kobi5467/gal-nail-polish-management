@@ -23,13 +23,13 @@ const AppointmentsScreen = () => {
           height: "93vh",
           padding: 20,
           background: `url(${backgroundImage})`,
-          backgroundRepeat: "no-repeat",
+          backgroundRepeat: "repeat",
           backgroundSize: "cover",
           justifyContent: "center",
           alignItems: "stretch",
         }}
       >
-        <Grid item xs={9}>
+        <Grid item xs={12} lg={9}>
           <MyCalendar
             reload={reload}
             selectedYear={selectedYear}
