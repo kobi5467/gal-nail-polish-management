@@ -2,7 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Grid, Typography, Button, Fab, IconButton } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import { primaryColor, secondaryColor, secondaryColorNoOpacity } from "../../../../constants/colors";
+import {
+  calendarColor,
+  primartColorWithOpacity,
+  primaryColor,
+  secondaryColor,
+  secondaryColorNoOpacity,
+} from "../../../../constants/colors";
 import { weekDays, getDaysByDate, months } from "../../../../utils/dates_util";
 import { useUserContext } from "../../../../components/contexts/user_context_provider";
 import { getAppointments } from "../../../../controllers/appointments_controller";
@@ -165,12 +171,16 @@ const Day = ({ dayObj, isSelected, setSelectedDay, setSelectedMonth, setSelected
         height: "10vh",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: isSelected ? "#9f79f3" : dayObj.sameDate ? secondaryColorNoOpacity : primaryColor,
+        backgroundColor: isSelected
+          ? "#9f79f3"
+          : dayObj.sameDate
+          ? calendarColor
+          : primartColorWithOpacity("77"),
         borderRadius: 5,
-        border: appointments.length === 0 ? "none" : "5px solid black",
+        border: appointments.length === 0 ? "1px solid white" : "5px solid black",
       }}
     >
-      <Typography variant="body2" style={{ color: "white", fontSize: 24, fontWeight: "bold" }}>
+      <Typography variant="body2" style={{ color: "black", fontSize: 30, fontWeight: "bold" }}>
         {dayObj.day}
       </Typography>
     </Grid>

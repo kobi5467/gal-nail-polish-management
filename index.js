@@ -49,7 +49,7 @@ const url =
   password +
   "@gelnailpolishmanagement.clpgail.mongodb.net/?retryWrites=true&w=majority";
 
-console.log("url = " + url);
+mongoose.set("strictQuery", true);
 mongoose.connect(url);
 
 const connection = mongoose.connection;
