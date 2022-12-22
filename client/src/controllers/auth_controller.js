@@ -1,6 +1,6 @@
 import axios from "axios";
 
-var authBaseUrl = "http://127.0.0.1:3000/api/v1/auth";
+var authBaseUrl = "https://friendly-waistcoat-bull.cyclic.app/api/v1/auth";
 
 export const signIn = async (email, password) => {
   try {
